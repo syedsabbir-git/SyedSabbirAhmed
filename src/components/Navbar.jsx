@@ -137,7 +137,8 @@ const Navbar = () => {
                 );
               })}
               <motion.a
-                href="#"
+                href="/resume.pdf"
+                download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="ml-4 px-4 py-2 border border-accent-blue text-accent-blue rounded hover:bg-accent-blue/10 transition-all font-mono text-sm"

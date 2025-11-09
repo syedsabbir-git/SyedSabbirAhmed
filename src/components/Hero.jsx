@@ -7,7 +7,7 @@ const Hero = () => {
   const [commandIndex, setCommandIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
   
-  const fullText = 'Full-Stack Mobile And App Developer';
+  const fullText = 'Full-Stack And App Developer';
   
   const terminalCommands = [
     '> Initializing portfolio...',
@@ -60,7 +60,7 @@ const Hero = () => {
     <section ref={ref} id="home" className="min-h-screen flex items-center pt-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Content */}
+          {/* Content - Always first column on desktop */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -98,6 +98,32 @@ const Hero = () => {
               <span className="text-accent-purple">{'>'}</span> {displayedText}
               <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>_</span>
             </motion.h2>
+
+            {/* Hero Image - MOBILE ONLY - Shows after title */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="lg:hidden mb-8"
+            >
+              <div className="relative max-w-xs mx-auto">
+                {/* Decorative code background */}
+                <div className="absolute inset-0 code-card rounded-lg transform rotate-3 opacity-20"></div>
+                <div className="absolute inset-0 code-card rounded-lg transform -rotate-3 opacity-20"></div>
+                
+                {/* Main image container */}
+                <div className="relative code-card rounded-lg overflow-hidden border-2 border-accent-blue">
+                  <img
+                    src="/rafi.png"
+                    alt="Syed Sabbir Ahmed"
+                    className="w-full h-auto"
+                  />
+                  
+                  {/* Overlay effect */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-60"></div>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Description */}
             <motion.p
@@ -185,12 +211,12 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right: Hero Image - RESPONSIVE */}
+          {/* Hero Image - DESKTOP ONLY - Shows on right */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative mt-8 lg:mt-0"
+            className="relative hidden lg:block"
           >
             <div className="relative max-w-sm mx-auto lg:max-w-none">
               {/* Decorative code background */}
@@ -199,7 +225,6 @@ const Hero = () => {
               
               {/* Main image container */}
               <div className="relative code-card rounded-lg overflow-hidden border-2 border-accent-blue">
-                {/* Replace with your image */}
                 <img
                   src="/rafi.png"
                   alt="Syed Sabbir Ahmed"
@@ -214,7 +239,7 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-4 -right-4 code-card px-3 py-2 rounded border border-accent-green hidden sm:block"
+                className="absolute -top-4 -right-4 code-card px-3 py-2 rounded border border-accent-green"
               >
                 <span className="text-accent-green font-mono text-sm">{'<Developer />'}</span>
               </motion.div>
@@ -222,9 +247,9 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-                className="absolute -bottom-4 -left-4 code-card px-3 py-2 rounded border border-accent-purple hidden sm:block"
+                className="absolute -bottom-4 -left-4 code-card px-3 py-2 rounded border border-accent-purple"
               >
-                <span className="text-accent-purple font-mono text-xs sm:text-sm">const skills = ["React", "Flutter"];</span>
+                <span className="text-accent-purple font-mono text-sm">const skills = ["React", "Flutter"];</span>
               </motion.div>
             </div>
           </motion.div>

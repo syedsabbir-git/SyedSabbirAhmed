@@ -63,22 +63,34 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             className="fixed inset-4 md:inset-8 lg:inset-16 z-50 overflow-hidden"
           >
             <div className="bg-dark-surface border-2 border-dark-border rounded-lg h-full flex flex-col overflow-hidden">
-              {/* Terminal-style Header */}
-              <div className="bg-dark-bg border-b-2 border-dark-border px-4 py-3 flex items-center justify-between flex-shrink-0">
-                <div className="flex items-center gap-3">
-                  {/* Terminal dots */}
-                  <div className="flex gap-2">
-                    <button onClick={onClose} className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors"></button>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              {/* Terminal-style Header - FIXED SMALL DOTS */}
+              <div className="bg-dark-bg border-b-2 border-dark-border px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between flex-shrink-0">
+                <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                  {/* Terminal dots - Fixed 10px size */}
+                  <div className="flex gap-1.5 flex-shrink-0">
+                    <button 
+                      onClick={onClose} 
+                      className="rounded-full bg-red-500 hover:bg-red-600 transition-colors flex-shrink-0"
+                      style={{ width: '10px', height: '10px', minWidth: '10px', minHeight: '10px' }}
+                      aria-label="Close"
+                    ></button>
+                    <div 
+                      className="rounded-full bg-yellow-500 flex-shrink-0"
+                      style={{ width: '10px', height: '10px', minWidth: '10px', minHeight: '10px' }}
+                    ></div>
+                    <div 
+                      className="rounded-full bg-green-500 flex-shrink-0"
+                      style={{ width: '10px', height: '10px', minWidth: '10px', minHeight: '10px' }}
+                    ></div>
                   </div>
-                  <span className="text-text-muted font-mono text-sm">project_details.json</span>
+                  <span className="text-text-muted font-mono text-xs sm:text-sm truncate">project_details.json</span>
                 </div>
                 <button
                   onClick={onClose}
-                  className="p-1 hover:bg-dark-hover rounded transition-colors text-text-muted hover:text-text-primary"
+                  className="p-1 hover:bg-dark-hover rounded transition-colors text-text-muted hover:text-text-primary flex-shrink-0"
+                  aria-label="Close modal"
                 >
-                  <HiX className="text-xl" />
+                  <HiX className="text-lg sm:text-xl" />
                 </button>
               </div>
 
@@ -92,14 +104,14 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     transition={{ delay: 0.1 }}
                     className="mb-8"
                   >
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h2 className={`text-3xl md:text-4xl font-bold ${colors.text} mb-2`}>
+                    <div className="flex items-start justify-between mb-4 gap-4">
+                      <div className="flex-1 min-w-0">
+                        <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold ${colors.text} mb-2`}>
                           {project.title}
                         </h2>
-                        <p className="text-text-secondary text-lg font-mono">{project.tagline}</p>
+                        <p className="text-text-secondary text-sm sm:text-base lg:text-lg font-mono">{project.tagline}</p>
                       </div>
-                      <span className="px-3 py-1 text-xs font-mono bg-dark-bg rounded border border-dark-border text-accent-purple">
+                      <span className="px-2 sm:px-3 py-1 text-xs font-mono bg-dark-bg rounded border border-dark-border text-accent-purple flex-shrink-0">
                         {project.category === 'mobile' ? '📱 Mobile' : '🌐 Web'}
                       </span>
                     </div>
@@ -112,7 +124,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     transition={{ delay: 0.2 }}
                     className="relative bg-dark-bg rounded-lg overflow-hidden mb-6 border-2 border-dark-border"
                   >
-                    <div className="relative h-64 md:h-96 lg:h-[500px]">
+                    <div className="relative h-48 sm:h-64 md:h-96 lg:h-[500px]">
                       <img
                         src={images[currentImageIndex]}
                         alt={`${project.title} screenshot ${currentImageIndex + 1}`}
@@ -124,19 +136,21 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                         <>
                           <button
                             onClick={prevImage}
-                            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-dark-surface/90 hover:bg-dark-surface border border-dark-border rounded transition-all"
+                            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-dark-surface/90 hover:bg-dark-surface border border-dark-border rounded transition-all"
+                            aria-label="Previous image"
                           >
-                            <HiChevronLeft className="text-xl text-text-primary" />
+                            <HiChevronLeft className="text-base sm:text-xl text-text-primary" />
                           </button>
                           <button
                             onClick={nextImage}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-dark-surface/90 hover:bg-dark-surface border border-dark-border rounded transition-all"
+                            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-dark-surface/90 hover:bg-dark-surface border border-dark-border rounded transition-all"
+                            aria-label="Next image"
                           >
-                            <HiChevronRight className="text-xl text-text-primary" />
+                            <HiChevronRight className="text-base sm:text-xl text-text-primary" />
                           </button>
                           
                           {/* Image Counter */}
-                          <div className="absolute top-4 right-4 px-3 py-1 bg-dark-surface/90 border border-dark-border rounded text-sm font-mono">
+                          <div className="absolute top-2 sm:top-4 right-2 sm:right-4 px-2 sm:px-3 py-1 bg-dark-surface/90 border border-dark-border rounded text-xs sm:text-sm font-mono">
                             <span className={colors.text}>{currentImageIndex + 1}</span>
                             <span className="text-text-muted"> / {images.length}</span>
                           </div>
@@ -151,13 +165,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.3 }}
-                      className="flex gap-3 mb-8 overflow-x-auto pb-2 scrollbar-thin"
+                      className="flex gap-2 sm:gap-3 mb-8 overflow-x-auto pb-2 scrollbar-thin"
                     >
                       {images.map((img, idx) => (
                         <button
                           key={idx}
                           onClick={() => setCurrentImageIndex(idx)}
-                          className={`flex-shrink-0 w-24 h-24 rounded overflow-hidden border-2 transition-all ${
+                          className={`flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded overflow-hidden border-2 transition-all ${
                             idx === currentImageIndex
                               ? `${colors.border} scale-105`
                               : 'border-dark-border opacity-50 hover:opacity-100'
@@ -178,11 +192,11 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
+                    className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-8"
                   >
                     {project.metrics.map((metric, idx) => (
-                      <div key={idx} className="code-card p-4 rounded text-center border border-dark-border">
-                        <div className={`text-2xl font-bold font-mono ${colors.text} mb-1`}>
+                      <div key={idx} className="code-card p-3 sm:p-4 rounded text-center border border-dark-border">
+                        <div className={`text-lg sm:text-xl md:text-2xl font-bold font-mono ${colors.text} mb-1`}>
                           {metric.value}
                         </div>
                         <div className="text-xs text-text-muted uppercase">{metric.label}</div>
@@ -195,12 +209,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
-                    className="code-card p-6 rounded mb-6 border border-dark-border"
+                    className="code-card p-4 sm:p-6 rounded mb-6 border border-dark-border"
                   >
-                    <h3 className="text-lg font-bold text-text-primary mb-3 font-mono flex items-center gap-2">
+                    <h3 className="text-base sm:text-lg font-bold text-text-primary mb-3 font-mono flex items-center gap-2">
                       <span className={colors.text}>$</span> cat description.txt
                     </h3>
-                    <p className="text-text-secondary leading-relaxed">
+                    <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
                       {project.fullDescription}
                     </p>
                   </motion.div>
@@ -210,9 +224,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="code-card p-6 rounded mb-6 border border-dark-border"
+                    className="code-card p-4 sm:p-6 rounded mb-6 border border-dark-border"
                   >
-                    <h3 className="text-lg font-bold text-text-primary mb-4 font-mono flex items-center gap-2">
+                    <h3 className="text-base sm:text-lg font-bold text-text-primary mb-4 font-mono flex items-center gap-2">
                       <span className={colors.text}>$</span> cat features.txt
                     </h3>
                     <ul className="space-y-2">
@@ -225,7 +239,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                           className="flex items-start gap-3"
                         >
                           <span className={`${colors.text} mt-1 flex-shrink-0`}>▹</span>
-                          <span className="text-text-secondary">{highlight}</span>
+                          <span className="text-sm sm:text-base text-text-secondary">{highlight}</span>
                         </motion.li>
                       ))}
                     </ul>
@@ -236,9 +250,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7 }}
-                    className="code-card p-6 rounded mb-6 border border-dark-border"
+                    className="code-card p-4 sm:p-6 rounded mb-6 border border-dark-border"
                   >
-                    <h3 className="text-lg font-bold text-text-primary mb-4 font-mono flex items-center gap-2">
+                    <h3 className="text-base sm:text-lg font-bold text-text-primary mb-4 font-mono flex items-center gap-2">
                       <span className={colors.text}>$</span> ls tech_stack/
                     </h3>
                     <div className="flex flex-wrap gap-2">
@@ -248,7 +262,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.7 + idx * 0.03 }}
-                          className="px-3 py-2 text-sm font-mono bg-dark-bg rounded border border-dark-border hover:border-accent-blue transition-colors"
+                          className="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-mono bg-dark-bg rounded border border-dark-border hover:border-accent-blue transition-colors"
                         >
                           {tech}
                         </motion.span>
@@ -261,16 +275,16 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="flex flex-wrap gap-4"
+                    className="flex flex-wrap gap-3 sm:gap-4"
                   >
                     {project.liveLink && (
                       <a
                         href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center gap-2 px-6 py-3 ${colors.bg} text-dark-bg rounded hover:opacity-90 transition-all font-mono font-semibold`}
+                        className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 ${colors.bg} text-dark-bg rounded hover:opacity-90 transition-all font-mono font-semibold text-sm sm:text-base flex-1 sm:flex-initial`}
                       >
-                        <HiExternalLink className="text-lg" /> View Live Site
+                        <HiExternalLink className="text-base sm:text-lg" /> View Live Site
                       </a>
                     )}
                     {project.downloadLink && (
@@ -278,18 +292,18 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                         href={project.downloadLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center gap-2 px-6 py-3 border-2 ${colors.border} ${colors.text} rounded hover:bg-current/10 transition-all font-mono font-semibold`}
+                        className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 border-2 ${colors.border} ${colors.text} rounded hover:bg-current/10 transition-all font-mono font-semibold text-sm sm:text-base flex-1 sm:flex-initial`}
                       >
-                        <HiDownload className="text-lg" /> Download App
+                        <HiDownload className="text-base sm:text-lg" /> Download App
                       </a>
                     )}
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-6 py-3 border-2 border-text-muted text-text-muted rounded hover:border-text-primary hover:text-text-primary transition-all font-mono font-semibold"
+                      className="flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 border-2 border-text-muted text-text-muted rounded hover:border-text-primary hover:text-text-primary transition-all font-mono font-semibold text-sm sm:text-base flex-1 sm:flex-initial"
                     >
-                      <HiCode className="text-lg" /> Source Code
+                      <HiCode className="text-base sm:text-lg" /> Source Code
                     </a>
                   </motion.div>
                 </div>

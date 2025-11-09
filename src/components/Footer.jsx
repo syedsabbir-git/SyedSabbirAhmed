@@ -4,10 +4,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-text-secondary font-mono text-sm mb-2">
-            Designed & Built by <span className="text-accent-blue">Syed Sabbir Ahmed</span>
-          </p>
-          <p className="text-text-muted text-xs">
-            © {new Date().getFullYear()} • Made with React + Tailwind CSS
+            © Designed & Built by <span className="text-accent-blue">Syed Sabbir Ahmed</span>
           </p>
         </div>
       </div>
