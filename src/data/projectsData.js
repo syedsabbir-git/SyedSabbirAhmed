@@ -15,7 +15,7 @@ export const projectsData = [
     tech: ["React", "Firebase", "PWA", "Vercel", "FCM", "JavaScript"],
     color: "cyan",
     neonColor: "#00F5FF",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
+    image: "images/classsync/cs0.png",
     // Add multiple screenshots here
     screenshots: [
       "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
@@ -49,7 +49,7 @@ export const projectsData = [
     tech: ["Flutter", "Dart", "Supabase", "Firebase", "WebSockets", "RLS"],
     color: "purple",
     neonColor: "#B026FF",
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
+    image: "images/uniride/us0.png",
     screenshots: [
       "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
       "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=800&q=80",
@@ -81,13 +81,17 @@ export const projectsData = [
     tech: ["Flutter", "Firebase", "Cloudinary", "Geolocation", "Dart"],
     color: "green",
     neonColor: "#00FF85",
-    image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80",
+    image: "/images/diurecycle/s0.png",
     screenshots: [
-      "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80",
-      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
-      "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&q=80",
+     '/images/diurecycle/i1.png',
+     '/images/diurecycle/i2.png',
+     '/images/diurecycle/i3.png',
+     '/images/diurecycle/i4.png',
+     '/images/diurecycle/i6.png',
+     '/images/diurecycle/i5.png'
+     
     ],
-    github: "https://github.com/yourusername/diurecycle",
+    github: "https://github.com/syedsabbir-git/DIU-Recycle",
     highlights: [
       "70% bandwidth reduction with Cloudinary compression",
       "Less than 1 second chat latency",

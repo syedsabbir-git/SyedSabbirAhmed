@@ -46,17 +46,35 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setStatus({ 
-        type: 'success', 
-        message: '✓ Message sent successfully! I\'ll get back to you soon.' 
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '74d15574-41c9-4bf0-bb7a-a19472aedc44', 
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `Portfolio Contact from ${formData.name}`,
+        }),
       });
-      setFormData({ name: '', email: '', message: '' });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus({ 
+          type: 'success', 
+          message: '✓ Message sent successfully! I\'ll get back to you soon.' 
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Failed to send');
+      }
     } catch (error) {
       setStatus({ 
         type: 'error', 
-        message: '✗ Failed to send message. Please try again.' 
+        message: '✗ Failed to send message. Please try again or email me directly.' 
       });
     } finally {
       setLoading(false);
@@ -193,7 +211,7 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* Right: Contact Info & Social - EQUAL HEIGHT */}
+          {/* Right: Contact Info & Social */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
