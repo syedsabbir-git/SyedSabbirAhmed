@@ -34,10 +34,10 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: SiGithub, label: 'GitHub', href: 'https://github.com/yourusername' },
-    { icon: SiLinkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/yourusername' },
-    { icon: SiLeetcode, label: 'LeetCode', href: 'https://leetcode.com/yourusername' },
-    { icon: SiCodeforces, label: 'Codeforces', href: 'https://codeforces.com/profile/yourusername' },
+    { icon: SiGithub, label: 'GitHub', href: 'https://github.com/syedsabbir-git' },
+    { icon: SiLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/syed-sabbir-ahmed/' },
+    { icon: SiLeetcode, label: 'LeetCode', href: 'https://leetcode.com/u/rafivaiii/' },
+    { icon: SiCodeforces, label: 'Codeforces', href: 'https://codeforces.com/profile/syedsabbirahmed' },
   ];
 
   const handleSubmit = async (e) => {

@@ -18,13 +18,14 @@ export const projectsData = [
     image: "images/classsync/cs0.png",
     // Add multiple screenshots here
     screenshots: [
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80",
+      "images/classsync/cs1.png",
+      "images/classsync/cs2.png",
+      "images/classsync/cs3.png",
+      "images/classsync/cs4.png"
       // Add your real screenshot URLs here
     ],
-    liveLink: "https://your-classsync-link.com",
-    github: "https://github.com/yourusername/classsync",
+    liveLink: "https://class-sync-green.vercel.app/",
+    github: "https://github.com/syedsabbir-git/ClassSync",
     highlights: [
       "Real-time data synchronization with <500ms latency",
       "Role-Based Access Control (RBAC) for security",
@@ -55,6 +56,7 @@ export const projectsData = [
       "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=800&q=80",
       "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=800&q=80",
     ],
+    liveLink: "https://www.bitstreamhq.com/projects/uniride",
     downloadLink: "https://drive.google.com/your-uniride-apk",
     github: "https://github.com/yourusername/uniride",
     highlights: [
@@ -91,6 +93,8 @@ export const projectsData = [
      '/images/diurecycle/i5.png'
      
     ],
+    liveLink: "https://diurecycle.vercel.app/",
+    downloadLink: "https://diurecycle.vercel.app/",
     github: "https://github.com/syedsabbir-git/DIU-Recycle",
     highlights: [
       "70% bandwidth reduction with Cloudinary compression",

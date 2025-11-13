@@ -284,7 +284,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                         rel="noopener noreferrer"
                         className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 ${colors.bg} text-dark-bg rounded hover:opacity-90 transition-all font-mono font-semibold text-sm sm:text-base flex-1 sm:flex-initial`}
                       >
-                        <HiExternalLink className="text-base sm:text-lg" /> View Live Site
+                        <HiExternalLink className="text-base sm:text-lg" /> Website
                       </a>
                     )}
                     {project.downloadLink && (

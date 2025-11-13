@@ -27,7 +27,7 @@ const ProjectCard = ({ project, onClick }) => {
       whileTap={{ scale: 0.98 }}
     >
       {/* Project Thumbnail Image */}
-      <div className="relative w-full h-full overflow-hidden bg-dark-bg border-b border-dark-border">
+      <div className="relative w-full h-80 overflow-hidden bg-dark-bg border-b border-dark-border">
         {!imageError ? (
           <img
             src={project.image}
