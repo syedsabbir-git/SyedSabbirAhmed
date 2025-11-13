@@ -221,7 +221,7 @@ const Navbar = () => {
                   <motion.a
                     custom={navItems.length + 1}
                     variants={itemVariants}
-                    href="/resume.pdf"
+                    href="/SYED-SABBIR-AHMED.pdf"
                     download
                     className="block w-full text-center px-4 py-3 border border-accent-green text-accent-green rounded hover:bg-accent-green/10 font-mono font-semibold"
                   >

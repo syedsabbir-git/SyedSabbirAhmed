@@ -281,7 +281,7 @@ const Contact = () => {
 
               {/* Download Resume Button */}
               <motion.a
-                href="/resume.pdf"
+                href="/SYED-SABBIR-AHMED.pdf"
                 download
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
