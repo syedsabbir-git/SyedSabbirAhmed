@@ -52,9 +52,9 @@ export const projectsData = [
     neonColor: "#B026FF",
     image: "images/uniride/us0.png",
     screenshots: [
-      "images/classsync/urs1.png",
-      "images/classsync/urs2.png",
-      "images/classsync/urs3.png",
+      "images/uniride/urs1.png",
+      "images/uniride/urs2.png",
+      "images/uniride/urs3.png",
     ],
     liveLink: "https://www.bitstreamhq.com/projects/uniride",
     downloadLink: "https://play.google.com/store/apps/details?id=com.asterisks.uniride&hl=en",
