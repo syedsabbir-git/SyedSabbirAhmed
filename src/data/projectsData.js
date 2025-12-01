@@ -52,13 +52,13 @@ export const projectsData = [
     neonColor: "#B026FF",
     image: "images/uniride/us0.png",
     screenshots: [
-      "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
-      "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=800&q=80",
-      "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=800&q=80",
+      "images/classsync/urs1.png",
+      "images/classsync/urs2.png",
+      "images/classsync/urs3.png",
     ],
     liveLink: "https://www.bitstreamhq.com/projects/uniride",
-    downloadLink: "https://drive.google.com/your-uniride-apk",
-    github: "https://github.com/yourusername/uniride",
+    downloadLink: "https://play.google.com/store/apps/details?id=com.asterisks.uniride&hl=en",
+    github: "",
     highlights: [
       "60% reduction in Firebase reads with smart caching",
       "Sub-3 second app launch time",
