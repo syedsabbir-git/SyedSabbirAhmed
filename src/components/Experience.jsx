@@ -5,10 +5,14 @@ const workExperience = {
     {
       title: 'Junior Software Engineer',
       period: 'May 2026 – Present',
+      summary:
+        'Driving production-scale feature delivery, architecture decisions, and cross-platform stability improvements.',
     },
     {
       title: 'Trainee Software Engineer',
       period: 'Dec 2025 – Apr 2026',
+      summary:
+        'Contributed to mobile and admin workflows while strengthening testing, integration, and module reliability.',
     },
   ],
   achievements: [
@@ -55,26 +59,34 @@ const Experience = () => {
               <h3 className="text-xl font-bold text-accent-purple">{workExperience.company}</h3>
               <p className="text-sm font-mono text-text-muted">{workExperience.location}</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="relative mt-6 pl-6 border-l border-dark-border/90 space-y-6">
               {workExperience.roles.map((role) => (
-                <div key={role.title} className="bg-dark-bg rounded-lg border border-dark-border p-4">
+                <div key={role.title} className="relative">
+                  <span
+                    aria-hidden="true"
+                    className="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full bg-accent-blue border-2 border-dark-bg"
+                  />
                   <p className="text-text-primary font-semibold">{role.title}</p>
                   <p className="text-text-muted text-sm font-mono mt-1">{role.period}</p>
+                  <p className="text-text-secondary text-sm mt-2 leading-relaxed">{role.summary}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {workExperience.achievements.map((item) => (
-              <div
-                key={item.title}
-                className="code-card p-5 rounded-lg border border-dark-border"
-              >
-                <h4 className="text-accent-green font-mono text-sm mb-3">{item.title}</h4>
-                <p className="text-text-secondary leading-relaxed text-sm">{item.description}</p>
-              </div>
-            ))}
+          <div className="code-card p-5 rounded-lg border border-dark-border">
+            <h4 className="text-accent-green font-mono text-sm mb-4">Impact Highlights</h4>
+            <div className="space-y-3">
+              {workExperience.achievements.map((item) => (
+                <details key={item.title} className="bg-dark-bg rounded-lg border border-dark-border px-4 py-3">
+                  <summary className="cursor-pointer list-none flex items-center justify-between gap-3">
+                    <span className="text-text-primary text-sm font-medium">{item.title}</span>
+                    <span className="text-text-muted text-xs font-mono">view</span>
+                  </summary>
+                  <p className="text-text-secondary leading-relaxed text-sm mt-3">{item.description}</p>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </div>
