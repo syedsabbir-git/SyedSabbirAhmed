@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 const workExperience = {
   company: '6amTech',
   location: 'Dhaka, Bangladesh',
@@ -41,35 +39,18 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <p className="text-accent-green font-mono text-sm mb-2">
             <span className="text-text-muted">syed@portfolio:~/experience$</span> cat work.log
-            <motion.span
-              animate={{ opacity: [1, 0, 1] }}
-              transition={{ duration: 1, repeat: Infinity }}
-            >
-              ▊
-            </motion.span>
+            <span> ▊</span>
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
             <span className="text-accent-blue font-mono">02.</span> Work Experience
           </h2>
-        </motion.div>
+        </div>
 
         <div className="space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="code-card p-6 rounded-lg border border-dark-border"
-          >
+          <div className="code-card p-6 rounded-lg border border-dark-border">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
               <h3 className="text-xl font-bold text-accent-purple">{workExperience.company}</h3>
               <p className="text-sm font-mono text-text-muted">{workExperience.location}</p>
@@ -82,21 +63,17 @@ const Experience = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {workExperience.achievements.map((item, index) => (
-              <motion.div
+            {workExperience.achievements.map((item) => (
+              <div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.15 + index * 0.08 }}
                 className="code-card p-5 rounded-lg border border-dark-border"
               >
                 <h4 className="text-accent-green font-mono text-sm mb-3">{item.title}</h4>
                 <p className="text-text-secondary leading-relaxed text-sm">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
