@@ -39,7 +39,7 @@ const Projects = () => {
             </motion.span>
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-            <span className="text-accent-blue font-mono">02.</span> Projects
+            <span className="text-accent-blue font-mono">03.</span> Projects
           </h2>
           <p className="text-text-secondary max-w-2xl">
             Production-ready applications showcasing modern development practices and scalable architecture.

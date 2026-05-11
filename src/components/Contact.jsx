@@ -109,7 +109,7 @@ const Contact = () => {
             </motion.span>
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-            <span className="text-accent-blue font-mono">04.</span> Get In Touch
+            <span className="text-accent-blue font-mono">05.</span> Get In Touch
           </h2>
           <p className="text-text-secondary max-w-2xl">
             I'm currently open to new opportunities and interesting projects. 
