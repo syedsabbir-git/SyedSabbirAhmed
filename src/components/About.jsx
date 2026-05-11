@@ -36,9 +36,9 @@ const About = () => {
       '  📱 +880 1793662422'
     ],
     experience: [
-      'Experience: 2+ years',
-      '  • Full-Stack Developer',
-      '  • Co-founder, BitStream'
+      '6amTech | Dhaka, Bangladesh',
+      '  • Junior Software Engineer (May 2026 - Present)',
+      '  • Trainee Software Engineer (Dec 2025 - Apr 2026)'
     ],
     clear: 'CLEAR'
   };
@@ -99,9 +99,9 @@ const About = () => {
               <div className="code-card p-6 rounded-lg border border-dark-border space-y-4 h-full flex flex-col justify-between">
                 <div className="space-y-4">
                   <p className="text-text-secondary leading-relaxed">
-                    I'm a <span className="text-accent-blue font-semibold">Full-Stack Developer</span> and{' '}
-                    <span className="text-accent-purple font-semibold">Co-founder of BitStream Startup</span>, 
-                    passionate about building scalable applications that make a real impact.
+                    I'm a <span className="text-accent-blue font-semibold">Junior Software Engineer</span> at{' '}
+                    <span className="text-accent-purple font-semibold">6amTech</span>, passionate about building
+                    scalable applications that make a real impact.
                   </p>
 
                   <p className="text-text-secondary leading-relaxed">
@@ -135,8 +135,8 @@ const About = () => {
 
                   <div>
                     <h3 className="text-accent-green font-mono text-sm mb-2">💼 Current</h3>
-                    <p className="text-text-secondary text-sm">Co-founder</p>
-                    <p className="text-text-muted text-xs">BitStream Startup</p>
+                    <p className="text-text-secondary text-sm">Junior Software Engineer</p>
+                    <p className="text-text-muted text-xs">6amTech</p>
                   </div>
                 </div>
               </div>

@@ -61,7 +61,7 @@ const Skills = () => {
             </motion.span>
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-            <span className="text-accent-blue font-mono">03.</span> Skills & Technologies
+            <span className="text-accent-blue font-mono">04.</span> Skills & Technologies
           </h2>
         </motion.div>
 

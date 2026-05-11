@@ -7,7 +7,7 @@ const Hero = () => {
   const [commandIndex, setCommandIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
   
-  const fullText = 'Full-Stack And App Developer';
+  const fullText = 'Junior Software Engineer';
   
   const terminalCommands = [
     '> Initializing portfolio...',
@@ -132,8 +132,8 @@ const Hero = () => {
               transition={{ delay: 0.8 }}
               className="text-base sm:text-lg text-text-secondary max-w-2xl mb-6 leading-relaxed"
             >
-              Building scalable web and mobile applications with modern technologies. 
-              Specialized in React, Flutter, and Firebase with a focus on performance optimization 
+              Junior Software Engineer at 6amTech, building scalable web and mobile products for
+              large multi-vendor ecosystems. Focused on Flutter, React, testing automation,
               and clean architecture.
             </motion.p>
 
@@ -185,7 +185,7 @@ const Hero = () => {
               </div>
               <div className="code-card px-4 py-3 rounded">
                 <p className="text-accent-purple font-mono text-xs mb-1">Experience</p>
-                <p className="text-xl font-bold text-text-primary">2+ Years</p>
+                <p className="text-xl font-bold text-text-primary">Since 2025</p>
               </div>
             </motion.div>
 
